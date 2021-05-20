@@ -1,6 +1,9 @@
 from math import sqrt
 
 def eratosthenes(N):
+    if N < 2:
+        return []
+
     flags = [True] * (N + 1)
     primes = []
 
@@ -29,5 +32,10 @@ def test_erat():
         print("Test 2: passed")
     else:
         print("Test 2: failed")
+
+    if eratosthenes(-1) == []:
+        print("Test 3: passed")
+    else:
+        print("Test 3: failed")
 
 test_erat()

@@ -1,6 +1,8 @@
 from math import floor
 
 def sundaram(N):
+    if N < 2:
+        return []
     flags = [True] * (N + 1)
     primes = [2]
 
@@ -26,5 +28,10 @@ def test_sundaram():
         print("Test 2: passed")
     else:
         print("Test 2: failed")
+
+    if sundaram(-1) == []:
+        print("Test 3: passed")
+    else:
+        print("Test 3: failed")
 
 test_sundaram()
